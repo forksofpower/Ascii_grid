@@ -24,6 +24,9 @@ class Ascii_grid
         @y_offset = y_offset.to_i
         @point = "\e[31m@\e[0m"
         @blank_space = "+"
+        @x_origin = "|"
+        @y_origin = "-"
+        @y_fill = "-"
         @clear = false
     end
 
@@ -71,15 +74,15 @@ class Ascii_grid
                 # Fill
                 if (print_fill)
                     if (@x_offset == current_x)
-                        printed << "|"
+                        printed << @x_origin
                     elsif (@y_offset == current_y)
-                        printed << "-"
+                        printed << @y_origin
                     else
                         printed << @blank_space.to_s
                     end
                 end
                 if (y_offset == current_y && current_x != @x_size)
-                    printed << "-"
+                    printed << @y_fill
                 else
                     printed << " "
                 end
