@@ -12,9 +12,15 @@ class Ascii_grid
     attr_accessor :y_offset
     # This is what will be printed as a point, should only be one character
     attr_accessor :point
+    # This is what will be printed along the x axis origin
+    attr_accessor :x_origin
+    # This is what will be printed along the y axis origin
+    attr_accessor :y_origin
+    # This is what will be printed along x axis origin
+    attr_accessor :y_fill
     # This is what will be printed as blank space in the grid, should only be one character
     attr_accessor :blank_space
-    # Bolean value, if true the clear command will be run when the make_grid method is called
+    # Boolean value, if true the clear command will be run when the make_grid method is called
     attr_accessor :clear
 
     def initialize(x_size, y_size, x_offset, y_offset)
